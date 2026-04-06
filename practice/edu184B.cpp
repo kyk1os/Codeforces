@@ -15,26 +15,24 @@ using namespace std;
 using ll = long long;
 
 void solve() {
-    string s;
-    cin >> s;
-    int n = s.size();
-    
-    for (int i = 0; i < n - 1; i++) {
-        if (s[i] != '<' && s[i + 1] != '>') {
-            cout << -1 << "\n";
-            return;
+    string s; cin >> s;
+    int n=s.size();
+
+    for (int i=0;i<n-1;i++){
+        if (s[i]!='<' && s[i+1]!='>'){
+            cout << -1 << "\n"; return;
         }
     }
-    
-    int a = 0, b = 0;
-    bool star = false;
-    for (char c : s) {
-        if (c == '<') a++;
-        else if (c == '>') b++;
-        else star = true;
+
+    int left=0, right=0;
+    bool havestar=false;
+    for (char c:s){
+        if (c=='<') left++;
+        else if (c=='>') right++;
+        else havestar=true;
     }
-    
-    cout << max(a, b) + (star ? 1 : 0) << "\n";
+
+    cout << max(left,right)+(havestar ? 1:0) << "\n";
 }
 
 int main() {
