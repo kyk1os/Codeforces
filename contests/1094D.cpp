@@ -21,7 +21,6 @@ void solve() {
 
     vector<pair<ll,int>> v;
     ll s=0;
-
     for(int i=0;i<n;i++) {
         v.push_back({s,i});
         s+=a[i];
@@ -32,7 +31,7 @@ void solve() {
     for(int i=0;i<n;i++)
         ans[v[i].second]=n-i;
     for(int i=0;i<n;i++) {
-        if(i) cout << " ";
+        if(i)cout << ' ';
         cout << ans[i];
     }
     cout << "\n";
