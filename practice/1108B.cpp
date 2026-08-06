@@ -17,8 +17,12 @@ using ll = long long;
 void solve() {
     int n; cin >> n;
     
-    if(n==1) cout << 1 << "\n";return;
-    if(n==2) cout << -1 << "\n";return;
+    if(n==1){
+        cout << 1 << "\n";return;
+    }
+    if(n==2){
+        cout << -1 << "\n";return;
+    }
 
     vector<ll> a={1,2,3};
     ll sum=6;
@@ -29,7 +33,7 @@ void solve() {
     }
 
     for (int i=0;i<n;i++){
-        cout << a[i] << "\n"[i==n-1];
+        cout << a[i] << " \n"[i==n-1];
     }
 }
 
